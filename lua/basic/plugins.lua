@@ -65,14 +65,166 @@ packer.startup(
                     require("conf.bufferline")
                 end
             }
-            -- 安装其它插件
-
+            -- 搜索时显示条目
             use {
                 "kevinhwang91/nvim-hlslens",
                 config = function()
                     require("conf.nvim-hlslens")
                 end
             }
+            -- 显示缩进线
+            use {
+                "lukas-reineke/indent-blankline.nvim",
+                config = function()
+                    require("conf.indent-blankline")
+                end
+            }
+            -- 自动匹配括号
+            use {
+                "windwp/nvim-autopairs",
+                config = function()
+                    require("conf.nvim-autopairs")
+                end
+            }
+            -- 快速更改单词
+            use {
+                "AndrewRadev/switch.vim",
+                config = function()
+                    require("conf.switch")
+                end
+            }
+            -- 快速跳转
+            use {
+                "phaazon/hop.nvim",
+                config = function()
+                    require("conf.hop")
+                end
+            }
+            -- 外部包裹修改
+            use {
+                "ur4ltz/surround.nvim",
+                config = function()
+                    require("conf.surround")
+                end
+            }
+            -- 显示光标下相同词汇
+            use {
+                "RRethy/vim-illuminate",
+                config = function()
+                    require("conf.vim-illuminate")
+                end
+            }
+            -- 拼写检查器
+            use {
+                "lewis6991/spellsitter.nvim",
+                config = function()
+                    require("conf.spellsitter")
+                end
+            }
+            -- 自动保存
+            use {
+                "Pocco81/AutoSave.nvim",
+                config = function()
+                    require("conf.AutoSave")
+                end
+            }
+            -- 自动恢复光标位置
+            use {
+                "ethanholz/nvim-lastplace",
+                config = function()
+                    require("conf.nvim-lastplace")
+                end
+            }
+            -- 自动恢复会话管理
+            use {
+                "rmagatti/auto-session",
+                config = function()
+                    require("conf.auto-session")
+                end
+            }
+            -- 全局替换
+            use {
+                "nvim-pack/nvim-spectre",
+                requires = {
+                    "nvim-lua/plenary.nvim", -- Lua 开发模块
+                    "BurntSushi/ripgrep" -- 文字查找
+                },
+                config = function()
+                    require("conf.nvim-spectre")
+                end
+            }
+            -- 多光标模式
+            use {
+                "terryma/vim-multiple-cursors",
+                config = function()
+                    require("conf.vim-multiple-cursors")
+                end
+            }
+            -- 显示侧边栏滚动条
+            use {
+                "petertriho/nvim-scrollbar",
+                config = function()
+                    require("conf.nvim-scrollbar")
+                end
+            }
+            -- 显示网页色
+            use {
+                "norcalli/nvim-colorizer.lua",
+                config = function()
+                    require("conf.nvim-colorizer")
+                end
+            }
+            -- 内置终端
+            use {
+                "akinsho/toggleterm.nvim",
+                config = function()
+                    require("conf.toggleterm")
+                end
+            }
+            -- VIM的撤销历史可视化工具
+            use {
+                "mbbill/undotree",
+                config = function()
+                    require("conf.undotree")
+                end
+            }
+            -- 键位绑定器
+            use {
+                "folke/which-key.nvim",
+                config = function()
+                    require("conf.which-key")
+                end
+            }
+            -- 模糊查找
+            use {
+                "nvim-telescope/telescope.nvim",
+                requires = {
+                    "nvim-lua/plenary.nvim", -- Lua 开发模块
+                    "BurntSushi/ripgrep", -- 文字查找
+                    "sharkdp/fd" -- 文件查找
+                },
+                config = function()
+                    require("conf.telescope")
+                end
+            }
+            -- 精美消息弹窗
+            use {
+                "rcarriga/nvim-notify",
+                config = function()
+                    require("conf.nvim-notify")
+                end
+            }
+            -- 突出显示、列出并搜索项目中的待办事项注释
+            use {
+                "folke/todo-comments.nvim",
+                config = function()
+                    require("conf.todo-comments")
+                end
+            }
+
+
+
+            -- 安装其它插件
         end,
         -- 使用浮动窗口
         config = {
