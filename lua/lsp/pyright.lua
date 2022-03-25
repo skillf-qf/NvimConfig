@@ -1,8 +1,9 @@
+-- 常用语言类食品配置：python
 return {
     root_dir = function()
         return vim.fn.getcwd()
     end,
-    -- 禁用 Pyright 的诊断信息（只使用 pylint）
+--    -- 禁用 Pyright 的诊断信息（只使用 pylint）
     handlers = {
         ---@diagnostic disable-next-line: unused-vararg
         ["textDocument/publishDiagnostics"] = function(...)

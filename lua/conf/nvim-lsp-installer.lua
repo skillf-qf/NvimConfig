@@ -18,8 +18,8 @@ local servers = {
     -- html = require("lsp.html"),
     -- cssls = require("lsp.cssls"),
     -- gopls = require("lsp.gopls"),
-    -- jsonls = require("lsp.jsonls"),
-    -- zeta_note = require("lsp.zeta_note"),
+    jsonls = require("lsp.jsonls"),
+    zeta_note = require("lsp.zeta_note"),
     -- sqls = require("lsp.sqls"),
     -- vuels = require("lsp.vuels")
 }
