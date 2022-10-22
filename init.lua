@@ -1,12 +1,22 @@
-require("basic.settings")
-require("basic.keybinds")
-require("basic.config")
-require("basic.plugins")
 
--- ~/.config/nvim/lua/basic/settings.lua
--- ~/.config/nvim/lua/basic/config.lua
--- ~/.config/nvim/lua/basic/plugins.lua
--- ~/.config/nvim/lua/conf/catppuccin.lua
--- ~/.config/nvim/lua/conf/nvim-tree.lua
--- ~/.config/nvim/lua/basic/config.lua
--- ~/.config/nvim/lua/basic/config.lua
+
+local packer_compiled = "~/.local/share/nvim/site/lua/packer_compiled.lua"
+
+local nvim_start = function()
+    -- 加载配置项
+    require("conf.settings")
+    require("conf.pack")
+    require("conf.keymap")
+
+    -- 存在则加载编译文件
+    if vim.fn.filereadable(vim.fn.expand(packer_compiled)) == 1 then
+        require("packer_compiled")
+    end
+
+    -- 应用 catppuccin 主题
+    vim.cmd([[colorscheme catppuccin]])
+    --vim.cmd([[set guifont=Fira\ Code\ Regular\ Nerd\ Font:h12]])
+    --vim.o.guifont = "Fira\ Code\ Regular\ Nerd\ Font:h12"
+end
+
+nvim_start()
